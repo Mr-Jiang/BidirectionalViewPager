@@ -2,7 +2,7 @@
 BidirectionalViewPager is a viewpager that can slide in both directions.
 
 # CSDN Blog URL
-https://blog.csdn.net/jspping/article/details/79774375
+https://blog.csdn.net/jspping/article/details/80208394
 
 # XML Usage
     <engineer.jsp.bidirectional.viewpager.BidirectionalViewPager
@@ -36,11 +36,11 @@ https://blog.csdn.net/jspping/article/details/79774375
 		});
 		
 # Horizontal slide effect
-![image](https://github.com/Mr-Jiang/Media/blob/master/MediaImage/mediaImage.png)
+![image](https://github.com/Mr-Jiang/BidirectionalViewPager/blob/master/PreviewImg/BidirectionalViewPager-Horizontal.gif)
 
 # Vertical slide effect
-![image](https://github.com/Mr-Jiang/Media/blob/master/MediaImage/mediaImage.png)		
+![image](https://github.com/Mr-Jiang/BidirectionalViewPager/blob/master/PreviewImg/BidirectionalViewPager-Vertical.gif)		
 
-#Feedback URL
-https://blog.csdn.net/jspping/article/details/79774375
+# Feedback URL
+https://blog.csdn.net/jspping/article/details/80208394
 		
