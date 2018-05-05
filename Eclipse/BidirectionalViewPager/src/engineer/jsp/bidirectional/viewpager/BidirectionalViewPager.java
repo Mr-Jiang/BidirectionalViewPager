@@ -59,26 +59,27 @@ import java.util.Comparator;
  * </p>
  *
  * <p>
- * ViewPager is most often used in conjunction with {@link android.app.Fragment}
- * , which is a convenient way to supply and manage the lifecycle of each page.
- * There are standard adapters implemented for using fragments with the
- * ViewPager, which cover the most common use cases. These are
- * {@link android.support.v4.app.FragmentPagerAdapter} and
+ * BidirectionalViewPager is most often used in conjunction with
+ * {@link android.app.Fragment} , which is a convenient way to supply and manage
+ * the lifecycle of each page. There are standard adapters implemented for using
+ * fragments with the BidirectionalViewPager, which cover the most common use
+ * cases. These are {@link android.support.v4.app.FragmentPagerAdapter} and
  * {@link android.support.v4.app.FragmentStatePagerAdapter}; each of these
  * classes have simple code showing how to build a full user interface with
  * them.
  *
  * <p>
- * Here is a more complicated example of ViewPager, using it in conjuction with
- * {@link android.app.ActionBar} tabs. You can find other examples of using
- * ViewPager in the API 4+ Support Demos and API 13+ Support Demos sample code.
+ * Here is a more complicated example of BidirectionalViewPager, using it in
+ * conjuction with {@link android.app.ActionBar} tabs. You can find other
+ * examples of using BidirectionalViewPager in the API 4+ Support Demos and API
+ * 13+ Support Demos sample code.
  *
  * {@sample development/samples/Support13Demos/src/com/example/android/supportv13/app/ActionBarTabsPager.java
  * complete}
  */
 @SuppressLint({ "RtlHardcoded", "ClickableViewAccessibility" })
 public class BidirectionalViewPager extends ViewGroup {
-	private static final String TAG = "ViewPager";
+	private static final String TAG = "BidirectionalViewPager";
 	private static final boolean DEBUG = false;
 
 	private static final boolean USE_CACHE = false;
@@ -327,8 +328,8 @@ public class BidirectionalViewPager extends ViewGroup {
 	 *
 	 * <p>
 	 * As property animation is only supported as of Android 3.0 and forward,
-	 * setting a PageTransformer on a ViewPager on earlier platform versions
-	 * will be ignored.
+	 * setting a PageTransformer on a BidirectionalViewPager on earlier platform
+	 * versions will be ignored.
 	 * </p>
 	 */
 	public interface PageTransformer {
@@ -520,9 +521,10 @@ public class BidirectionalViewPager extends ViewGroup {
 	}
 
 	/**
-	 * Set the currently selected page. If the ViewPager has already been
-	 * through its first layout with its current adapter there will be a smooth
-	 * animated transition between the current item and the specified item.
+	 * Set the currently selected page. If the BidirectionalViewPager has
+	 * already been through its first layout with its current adapter there will
+	 * be a smooth animated transition between the current item and the
+	 * specified item.
 	 *
 	 * @param item
 	 *            Item index to select
@@ -1291,10 +1293,10 @@ public class BidirectionalViewPager extends ViewGroup {
 	}
 
 	/**
-	 * This is the persistent state that is saved by ViewPager. Only needed if
-	 * you are creating a sublass of ViewPager that must save its own state, in
-	 * which case it should implement a subclass of this which contains that
-	 * state.
+	 * This is the persistent state that is saved by BidirectionalViewPager.
+	 * Only needed if you are creating a sublass of BidirectionalViewPager that
+	 * must save its own state, in which case it should implement a subclass of
+	 * this which contains that state.
 	 */
 	public static class SavedState extends BaseSavedState {
 		int position;
@@ -2583,15 +2585,16 @@ public class BidirectionalViewPager extends ViewGroup {
 	 *
 	 * <p>
 	 * A fake drag can be useful if you want to synchronize the motion of the
-	 * ViewPager with the touch scrolling of another view, while still letting
-	 * the ViewPager control the snapping motion and fling behavior. (e.g.
-	 * parallax-scrolling tabs.) Call {@link #fakeDragBy(float)} to simulate the
-	 * actual drag motion. Call {@link #endFakeDrag()} to complete the fake drag
-	 * and fling as necessary.
+	 * BidirectionalViewPager with the touch scrolling of another view, while
+	 * still letting the BidirectionalViewPager control the snapping motion and
+	 * fling behavior. (e.g. parallax-scrolling tabs.) Call
+	 * {@link #fakeDragBy(float)} to simulate the actual drag motion. Call
+	 * {@link #endFakeDrag()} to complete the fake drag and fling as necessary.
 	 *
 	 * <p>
-	 * During a fake drag the ViewPager will ignore all touch events. If a real
-	 * drag is already in progress, this method will return false.
+	 * During a fake drag the BidirectionalViewPager will ignore all touch
+	 * events. If a real drag is already in progress, this method will return
+	 * false.
 	 *
 	 * @return true if the fake drag began successfully, false if it could not
 	 *         be started.
@@ -3111,7 +3114,8 @@ public class BidirectionalViewPager extends ViewGroup {
 	@Override
 	public void addTouchables(ArrayList<View> views) {
 		// Note that we don't call super.addTouchables(), which means that
-		// we don't call View.addTouchables(). This is okay because a ViewPager
+		// we don't call View.addTouchables(). This is okay because a
+		// BidirectionalViewPager
 		// is itself not touchable.
 		for (int i = 0; i < getChildCount(); i++) {
 			final View child = getChildAt(i);
@@ -3158,7 +3162,7 @@ public class BidirectionalViewPager extends ViewGroup {
 
 	@Override
 	public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
-		// Dispatch scroll events from this ViewPager.
+		// Dispatch scroll events from this BidirectionalViewPager.
 		if (event.getEventType() == AccessibilityEventCompat.TYPE_VIEW_SCROLLED) {
 			return super.dispatchPopulateAccessibilityEvent(event);
 		}
@@ -3268,7 +3272,8 @@ public class BidirectionalViewPager extends ViewGroup {
 	}
 
 	/**
-	 * Layout parameters that should be supplied for views added to a ViewPager.
+	 * Layout parameters that should be supplied for views added to a
+	 * BidirectionalViewPager.
 	 */
 	public static class LayoutParams extends ViewGroup.LayoutParams {
 		/**
@@ -3279,8 +3284,8 @@ public class BidirectionalViewPager extends ViewGroup {
 
 		/**
 		 * Gravity setting for use on decor views only: Where to position the
-		 * view page within the overall ViewPager container; constants are
-		 * defined in {@link android.view.Gravity}.
+		 * view page within the overall BidirectionalViewPager container;
+		 * constants are defined in {@link android.view.Gravity}.
 		 */
 		public int gravity;
 
@@ -3301,7 +3306,8 @@ public class BidirectionalViewPager extends ViewGroup {
 		int position;
 
 		/**
-		 * Current child index within the ViewPager that this view occupies
+		 * Current child index within the BidirectionalViewPager that this view
+		 * occupies
 		 */
 		int childIndex;
 
