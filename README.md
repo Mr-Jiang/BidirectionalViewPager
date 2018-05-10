@@ -49,6 +49,7 @@ https://blog.csdn.net/jspping/article/details/80208394
 If you think this project is helpful to you, please give me GitHub Start or Fork to support me to continue to provide better projects!
 
 # License
+Copyright (C) 2018 Engineer-Jsp<br>
 Licensed under the Apache License, Version 2.0 (the "License");<br>
 you may not use this file except in compliance with the License.<br>
 You may obtain a copy of the License at
