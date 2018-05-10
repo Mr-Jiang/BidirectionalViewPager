@@ -48,9 +48,9 @@ https://blog.csdn.net/jspping/article/details/80208394
 
 If you think this project is helpful to you, please give me GitHub Start or Fork to support me to continue to provide better projects!
 
-# LICENSE
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
+# License
+Licensed under the Apache License, Version 2.0 (the "License");<br>
+you may not use this file except in compliance with the License.<br>
 You may obtain a copy of the License at
 
    http://www.apache.org/licenses/LICENSE-2.0
